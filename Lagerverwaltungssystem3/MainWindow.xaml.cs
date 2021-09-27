@@ -25,6 +25,7 @@ namespace Lagerverwaltungssystem3
         DataLogic dataLogic = new DataLogic();
         public MainWindow()
         {
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             InitializeComponent();
             dgOrder.ItemsSource = dataLogic.GetOrders();
             dgItems.ItemsSource = dataLogic.GetItems();

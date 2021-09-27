@@ -27,6 +27,7 @@ namespace Lagerverwaltungssystem3
         {
             InitializeComponent();
         }
+
         /// <summary>
         /// Creates a NewOrder window.
         /// Takes dataLogic as an argument so it doesnt initiate it twice.
@@ -35,12 +36,14 @@ namespace Lagerverwaltungssystem3
         /// <param name="dataLogic"></param>
         public NewOrder(Order order, DataLogic dataLogic)
         {
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             InitializeComponent();
             this.order = order;
             this.dataLogic = dataLogic;
             dgItems.ItemsSource = dataLogic.GetItems();
             lblOrderID.Content = order.OrderID;
         }
+
         /// <summary>
         /// Adds Orderposition to Order.
         /// </summary>
